@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Weather App</h1>
+    <form action="/" method="POST" class="weather-form">
+      <input id="cityInput" type="text" name="cityName" placeholder="Enter city name" />
+      <button type="submit" name="submit">Get Weather</button>
+    </form>
+
+    <% if (locals.data2) { %>
+      <div class="weather-data">
+        <h3><%= locals.data2.cityName1 %></h3>
+        <p class="description">Description: <%= locals.data2.weatherDescription %></p>
+        <p class="temperature">Temperature: <%= locals.data2.weatherTemp %> Celsius</p>
+        <p class="pressure">Pressure: <%= locals.data2.weatherPressure %> Pa</p>
+        <p class="humidity">Humidity: <%= locals.data2.weatherHumidity %> g/kg</p>
+        <div class="weather-icon">
+            <img src="<%= locals.data2.weatherIconURL %>" alt="Weather Icon">
+          </div>
+          
+      </div>
+    <% } else { %>
+        <br>
+      <p class="no-data">Enter a city name to see its current weather.</p>
+    <% } %>
+  </div>
+</body>
+</html>
