@@ -37,9 +37,6 @@ npm start
 
 4. The app will display the current weather data for the specified city, including temperature, pressure, humidity, and weather description, along with a weather icon.
 
-## Screenshots
-
-![Weather App Screenshot](screenshot.png)
 
 ## License
 
